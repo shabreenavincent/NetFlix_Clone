@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+nav {
+  background: linear-gradient(to right, #111, #000);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e50914;
+  flex: 1;
+}
+
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex: 2;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-center a:hover {
+  color: #e50914;
+}
+
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #e50914;
+}
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+
+
+.login a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login a:hover {
+  color: #e50914;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background: linear-gradient(to right, #000 10%, transparent), url('summerr.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.tags {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.hero h2 {
+  font-size: 1.5rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.hero-buttons button {
+  padding: 10px 20px;
+  border: none;
+  margin-right: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.stream {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.episodes {
+  background-color: #333;
+  color: #fff;
+}
+
+.hero-trailer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.trailer-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero-trailer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.movies-section {
+  padding: 0px 40px;
+  background-color: #191919;
+}
+
+.movies-section h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.movie-card p {
+  color: rgb(233, 226, 226);
+  font-size: 0.9rem;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.movie-card:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-center {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .login {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+    height: auto;
+  }
+
+  .hero-trailer {
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
